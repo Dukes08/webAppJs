@@ -1,3 +1,4 @@
+/*General*/
 body{
     font-family: 'Quicksand', sans-serif;
 }
@@ -20,6 +21,8 @@ body{
     display: none; /* esto hace que no se muestre el desktopmenu, con javascript 
     habilitamos que esto se active o no haciendo click */
 }
+
+/*Navar*/
 
 nav{
 display: flex;
@@ -101,6 +104,8 @@ justify-content: center;
 align-items: center;
 }
 
+/*Desktop menu*/
+
 .desktop-menu{
     position: absolute;
     background: var(--white) ;
@@ -151,10 +156,60 @@ align-items: center;
     margin-bottom: 20px;
 }
 
+/*Mobile menu*/
+
+.mobile-menu{
+    position: absolute;
+    top: 68px;
+}
+
+.mobile-menu a{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+   
+    
+}
+
+.mobile-menu ul{
+    padding: 0;
+    margin: 24px 0 0;
+    list-style: none;
+
+}
+
+.mobile-menu ul li{
+    margin-bottom: 24px;
+}
+
+.email{
+    font-size: var(--sm);
+    font-weight: 300 !important;
+
+}
+
+.mobile-menu ul:nth-child(1){
+    border-bottom: 1px solid var(--very-light-pink);
+}
+
+.Sign-out{
+    font-size: var(--sm);
+    color: var(--hospital-green) !important;
+}
+
+.mobile-menu ul:last-child{
+    position: absolute;
+    bottom: 0;
+}
+
+/*Media Quary*/
+
 @media (max-width: 640px){
 .menu{
     display: block;
+    cursor: pointer;
 }
+
 .navbar-left ul{
     display: none;
 }
@@ -162,4 +217,10 @@ align-items: center;
 .navbar-email{
     display: none;
 }
+
+.desktop-menu{
+    display: none;
 }
+
+}
+
